@@ -21,7 +21,6 @@ import androidx.work.Data
 import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
-import androidx.work.workDataOf
 import com.example.waterme.model.Plant
 import com.example.waterme.worker.WaterReminderWorker
 import com.example.waterme.worker.WaterReminderWorker.Companion.nameKey
@@ -45,7 +44,6 @@ class WorkManagerWaterRepository(context: Context) : WaterRepository {
             ExistingWorkPolicy.REPLACE,
             waterBuilder
         )
-
     }
 
     private fun createInputDataForWorkRequest(plantName: String):Data{
